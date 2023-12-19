@@ -9,11 +9,11 @@ app.get('/health_checkup', (req, res) => {
     const userName = req.headers.username;
     const password = req.headers.password;
 
-    if (userName != "shankar" || password != "pass") {
+    if (!(userName == "shankar" && password == "pass")) {
         res.status(401).json({ message: "unauthorized" });
         return;  //early retuns
     }
-    if (kidneyId != 1 && kidneyId != 2) {
+    if (!(kidneyId == 1 || kidneyId == 2)) {
         res.status(411).json({ message: "Wrong inputs" });
         return;
     }
