@@ -1,0 +1,158 @@
+git : It is a version control system. Helps in keep tracking of the files changes, compare changes, revert back etc.
+
+It is a distributed version control system
+
+why git?
+
+- Free
+- open source
+- scalable
+- super fast
+
+github : Used for hosting git repo's, cloud/based
+
+without git we can't work with github.
+
+
+Local Repo : working developing locally writing code, adding files, commiting the changes.
+
+staging area : An intermediate area where commits can be formatted and reviewed before completing the commit.
+
+push : send a change to another repository (may require permission)
+pull : grab a change from a repository
+
+
+git add (add files to the staging area)
+git commit (moves files from staging area and after push it stores the changes permenentely to the git repository)
+
+
+files are not addressed by names in git database, eveything is content addressed. it is named as SHA1 hash of that file
+
+A tree is a binary file that store references to blobs and tree which are also named as SHA1 hash of the tree object
+
+
+Commits
+
+commits hold the current state of the repository. A commit also named by SHA1 hash.
+commit object = a node of the linked list
+every commit object has a pointer to the parent commit object
+From a given commit, you can traverse back by looking at the parent pointer to view the history of the commit
+If a commit has multiple parent commits, then that particular commit has been created by merging two branches
+
+
+Git commands
+
+clone  : brings repo from github to local 
+add  :  track your files and changes in git
+commit : save your files in git
+push   : upload changes to github
+pull  : download changes from github
+
+
+
+git init : initializes the empty repository (.git folder will be created)
+
+git status : gives the status of the file whether added to staging area or not
+
+git add .  : adds all files to the staging area.
+
+git commit -m "message" : commits our staging files to the repo
+
+[Still our files are present in the local repo]
+
+To add remote origin
+
+git remote add origin https://github.com/Shankargopu/demo_repo.git   [git remote add name url.git]. 
+
+To check whether it is added
+
+git remote -v   (gives the added remote urls)
+
+git push origin master (git push nameofremoteurlAdded branchName]
+
+
+
+
+git config --global user.email "bhavanishankargopu@gmail.com"   //sets the user email for our git account
+git config --global user.name "bhavani shankar"  //sets the user name for our git account
+
+
+
+
+
+
+git clone  url (clones the github repo into our local repository)
+
+after made changes
+
+git add .
+git commit -m "message"
+git push
+
+
+setup ssh authnetication
+
+
+ssh-keygen -t rsa -b 4096 -C "bhavanishankargopu@gmail.com"   (this commands generate private/public key pair)
+
+keep public key in the github settings under ssh key section
+
+than use
+git clone ssh url.
+
+
+->Create new branch
+
+git checkout -b feature_update__files
+
+-> swith to new branch
+
+git checkout main
+
+-> see the difference in 2 branches
+
+git diff feature_update__files  (gives the differences in main and feature_update_files)
+
+
+push the current branch and raise PR we PR approves than changes will get automatically merged to source branch
+
+
+git log --merge : produce the list of commits that are causing the conflict.
+git diff  : identify the diff b/w the states repos or files.
+git checkout : used to undo the changes made to the file, or for changing branches.
+git reset --mixed : used to undo changes to the working directory and staging area
+git merge --abort : Helps in exiting the merge process and returning back to the state before the merging began
+git rest : Used at the time of merge conflict to reset the conflicted files to their original state
+
+delete branch : git branch -d feature_update_files
+
+if file is modified one 
+we can just add and commit with single command
+
+git commit -am "updated the file"
+
+to push the changes along with the local branch
+
+git push -u origin hotfix   (specify the -u flag which indicates the upstream the branch)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+-> pwd : The "pwd" command prints the full name (the full path) of current/working directory.  (print working directory)
+
+-> cd : The cd command in Linux stands for change directory. It is used to change the current directory of the terminal.  (change directoty)
+
+cd home : navigate to Home folder
+cd home/shankar : navigate to shankar folder.
+
+cd ..  : take one folder back (If I am in shankar folder than it navigates back to home folder)
+cd ../..   : taks tow folders back (If I am in shankar folder it navigates back to parent of home directory)
+
+-> ls  : The ls command is one of the more basic commands in Linux. It is designed to list the names and features of files and directories.  (list)
+
+-> mkdir : mkdir command in Linux allows the user to create directories (also referred to as folders in some operating systems). This command can create multiple directories at once as well as set the permissions for the directories. (make directory)
+
+mkdir test  : creates test folder
+mkdir test2 test3 : creates 2 folders at a time.
+
+mkdir test/test4  : creates test4 folder inside test
+
+-> touch : touch command: It is used to create a file without any content.
+
+touch txt.json txt.txt : creates two file at a time.
+
+-> cat : Cat(concatenate) command is very frequently used in Linux. It reads data from the file and gives its content as output. It helps us to create, view, and concatenate files.
+
+cat txt.txt : Prints the content of the file.
+
+Even if we are on it's parent dir we can to `cat test/txt.txt' to print the content
+
+-> vi :  It’s easy to invoke Vi. At the command line, you type vi <filename> to create a new file, or to edit an existing one.
+
+$ vi filename.txt
+
+$ vi <filename> — Open or edit a file.
+i — Switch to Insert mode.
+Esc — Switch to Command mode.
+:w — Save and continue editing.
+:wq or ZZ — Save and quit/exit vi.
+:q! — Quit vi and do not save changes.
+yy — Yank (copy) a line of text.
+p — Paste a line of yanked text below the current line.
+o — Open a new line under the current line.
+O — Open a new line above the current line.
+A — Append to the end of the line.
+a — Append after the cursor’s current position.
+I — Insert text at the beginning of the current line.
+b — Go to the beginning of the word.
+e — Go to the end of the word.
+x — Delete a single character.
+dd — Delete an entire line.
+Xdd — Delete X number of lines.
+Xyy — Yank X number of lines.
+G — Go to the last line in a file.
+XG — Go to line X in a file.
+gg — Go to the first line in a file.
+:num — Display the current line’s line number.
+h — Move left one character.
+j — Move down one line.
+k — Move up one line.
+l — Move right one character.
+
+
+-> mv : The mv command moves files and directories from one directory to another or renames a file or directory. If you move a file or directory to a new directory, it retains the base file name
+
+mv code code1 (renames code to code 1 if code 1 is not exists)
+
+mv code1 homw (moves code1 folder inside homw folder. since here homw folder exists)
+
+
+mv code homw/code1  (moves code to inside code1 folder which is inside homw if code1 does not exists than code renamed to code1 inside homw)
+
+mv txt.txt home/code1 (moves txt file to code1)
+
+
+-> cp : cp stands for a copy. This command is used to copy files or groups of files or directories. It creates an exact image of a file on a disk with a different file name. cp command requires at least two filenames in its arguments.
+
+
+cp -r test1 test4   (copies test1 directory to test4) -r indicates recursive
+
+ 
+
+
+
+
+
