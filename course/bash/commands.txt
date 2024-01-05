@@ -77,7 +77,159 @@ mv txt.txt home/code1 (moves txt file to code1)
 
 cp -r test1 test4   (copies test1 directory to test4) -r indicates recursive
 
+
+-> rm : used to remove a driectory.
+
+rm dir (removes directory)
+rm -rf dir (removes directory as root user)
+
+
+
+                                                         Advance commands
+
+ls :  lists all the files/dir in the directory.
+
+ls -l : gives the info of the files or directories present along with their permissions, last modfied, type of file etc.
+
+ls -R : gives detailed all the subfolders/files persent in the directory i.e, recursively lists all the sub-directories and the files.
+
+
+ls -t :  gives the list descending of their modification time. (lastest modifed first). 
+
+ls -lt : gives the list ascending of their modification time along with the other details when did ls -l.
+
+ls -la : it shows the hidden files as well.
+
+ls -lr  : gives the list ascending of their modification time. (latest modified last)
+
+ls -lR | grep .json  : gives all the json files recursively
+
+ls *.js : gives all the js files present in that specific directory
+
+ls fe* : gives all the files starts with fe
+
+
+
  
+
+touch file_name : creates a new file.
+
+cat file_name  : display the content of the file.
+
+cat > file_name  : we can enter the text in this file
+
+cat >> file_name : we can append the text to this file
+
+we can combine both commands also
+
+cat filename && rm filename  : It displays the content of the file and then removes that file.
+
+mkdir dirname && cd dirname  : It creates the directory first and then change the directory to that.
+
+mkdir -p dirname/dirname1  : we can create the directories recursively using -p tag.
+
+ex : 
+
+mkdir -p frontend/image
+mkdir -p frontend/css
+
+
+
+mv foldername1 foldername2  : it renamnes foldername1 to foldername2
+
+ex : mv test1 test2  : now test1 renamed as test2
+
+
+cp -r folder1 folder2 : copies the folder1 into folder2.
+
+rm test.txt : removes the test file
+
+rm -r folder : removes the folder
+
+
+
+chmod : change mode
+
+
+the chmod command is used to change the access mode of a file. The name is an abbreviation of change mode. Which states that every file and directory has a set of permissions that control the permissions like who can read, write or execute the file. In this the permissions have three categories: read, write, and execute simultaneously represented by `r`, `w` and `x`. These letters combine together to form a specific permission for a group of user.
+
+to add any permission to user, group or others
+
+for user : chmod u
+
+for group : chmod g
+
+for others : chmod o
+
+adding execute permission for the user on the file1
+
+-> chmod u+x file1
+
+adding read permission for the user on the folder1
+
+-> chmod -R u+r folder1
+
+removing both read and write permission for the user on the test.txt
+
+-> chmod u-rx test.txt
+
+adding read,write and execute permission for the others on the test.txt
+
+-> chmod o+rwx test.txt
+
+adding read,write and execute permission for the group on the test.txt
+
+->chmod g+rwx test.txt
+
+
+we can also give or remove permissions using the numbers
+
+read = 4
+write = 2
+execute = 1
+
+adding read permission for user and read,write permission to the group and read, execute permission to the others
+ 
+-> chmod 465 test.txt   
+
+adding all permission to the user,group and others.
+
+-> chmod 777 test.txt
+
+
+-> echo "hello"  : displays hello on the shell.
+
+-> echo $PATH : displays the path on the shell.
+
+............................................................................................................................................................................................
+
+ To get the first 10 rows from the file
+
+-> head test.txt
+
+To get the last romw from the file
+
+-> tail test.txt
+
+To get only certain rows : gives first 5 rows.
+
+-> head -5 test.txt
+
+To get last 10 rows
+
+-> tail -10 test.txt
+
+To get specific rows like from 10 to 15, we need to combine both the head and tail
+
+tail +10 selects rows from 10th and head -5 gives the first 5 rows after 10.
+
+right side of pipe operator takes the result of left side of pipe into consideration.
+
+tail +10 test.txt | head -5
+
+
+
+
 
 
 
